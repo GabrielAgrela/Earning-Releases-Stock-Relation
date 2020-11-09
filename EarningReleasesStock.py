@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 stockEvolutions = []
-key=""
+key="5VLKR5748I6ZIXJO"
 sheet.main()
 
 #get percentage (up/down) from 2 days diff (deppending on stock market closing or opening)
@@ -58,7 +58,7 @@ for x in range(0,len(sheet.companiesAfterClose)):
 		print("\n"+sheet.companiesAfterClose[x][i]+":")
 		stock(sheet.companiesAfterClose[x][i],x)
 
-#how did this stock(company, x)index perform
+#how did this stock index perform
 totalStockEvolution=0
 for j in range(0,len(stockEvolutions)):
 	totalStockEvolution = totalStockEvolution + float(stockEvolutions[j])
