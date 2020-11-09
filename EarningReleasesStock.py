@@ -30,8 +30,8 @@ def stockBeforeOpen(company,x):
 		try:
 			company=str(data['bestMatches'][0]["1. symbol"])
 		except:
-			print(str(data['Note']))
-			quit()
+			print("error name of the company")
+			#quit()
 
 	print("symbol: "+company)
 	time.sleep(13)
@@ -52,8 +52,8 @@ def stockBeforeOpen(company,x):
 			stockEvolutions.append(float("{:.2f}".format(calculateStockEvolution(stockPriceBefore,stockPriceAfter))))
 			stockEvolutionsTemp.append(float("{:.2f}".format(calculateStockEvolution(stockPriceBefore,stockPriceAfter))))
 		except:
-			print(str(data['Note']))
-			quit()
+			print("error")
+			#quit()
 
 	time.sleep(13) #(5 call per minute allowed, each company needs 2 calls, 60/13<5)
 
@@ -78,8 +78,8 @@ def stockAfterClosing(company,x):
 		try:
 			company=str(data['bestMatches'][0]["1. symbol"])
 		except:
-			print(str(data['Note']))
-			quit()
+			print("error name of the company")
+			#quit()
 
 	print("symbol: "+company)
 	time.sleep(13)
@@ -95,8 +95,8 @@ def stockAfterClosing(company,x):
 			print("Stock evolution: "+str("{:.2f}".format(calculateStockEvolution(stockPriceBefore,stockPriceAfter)))+"% \n")
 			stockEvolutions.append(float("{:.2f}".format(calculateStockEvolution(stockPriceBefore,stockPriceAfter))))
 		except:
-			print(str(data['Note']))
-			quit()
+			print("error")
+			#quit()
 
 	time.sleep(13) #(5 call per minute allowed, each company needs 2 calls, 60/13<5)
 
